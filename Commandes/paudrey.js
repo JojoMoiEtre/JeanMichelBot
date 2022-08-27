@@ -18,7 +18,7 @@ module.exports = {
         let id = '366298754866872331';
         let user = bot.users.cache.get(id);
 
-        if(!user) return message.reply("L’utilisateur concerné n'est pas sur ce serveur !");
+        if(!user) return message.reply("Une erreur est survenue !");
 
         let embed = new Discord.EmbedBuilder()
             .setColor('#1BD69A')
