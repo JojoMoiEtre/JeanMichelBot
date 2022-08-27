@@ -5,7 +5,7 @@ const mysql = require('mysql');
 module.exports = {
 
     name: "addanniv",
-    description: "Je note ta date de naissance pour pouvoir te rappeler à quel point tu es vieux ^^",
+    description: "Je note ta date de naissance pour pouvoir te rappeler à quel point tu es vieux le moment venu ^^",
     detail: "",
     argument: " <JJ/MM/AAAA>",
     permission: "Aucune",
@@ -30,7 +30,7 @@ module.exports = {
             password: "G32BT7u20JvcM0oDC98e"
         });
 
-        db.query(`CREATE TABLE IF NOT EXISTS \`${message.guild.id}\` (ID VARCHAR(255), DateJourMois VARCHAR(255), DateFull VARCHAR(255), PRIMARY KEY(ID, DateJourMois, DateFull))`, async (err) => {
+        db.query(`CREATE TABLE IF NOT EXISTS \`${message.guild.id}\` (ID VARCHAR(255), DateJourMois VARCHAR(255), DateFull VARCHAR(255), Channell VARCHAR(255), PRIMARY KEY(ID, DateJourMois, DateFull, Channell))`, async (err) => {
             if(err) return console.log(err);
         })
 
@@ -41,7 +41,7 @@ module.exports = {
 
                 if(req.length < 1) {
 
-                    let sql = `INSERT INTO \`${message.guild.id}\` (ID, DateJourMois, DateFull) VALUES (${message.author.id}, '${dateAnniv[0]}/${dateAnniv[1]}', '${dateAnniv[0]}/${dateAnniv[1]}/${dateAnniv[2]}')`
+                    let sql = `INSERT INTO \`${message.guild.id}\` (ID, DateJourMois, DateFull, Channell) VALUES (${message.author.id}, '${dateAnniv[0]}/${dateAnniv[1]}', '${dateAnniv[0]}/${dateAnniv[1]}/${dateAnniv[2]}', 'null')`
                     db.query(sql, function(err) {
 
                         if(err) return message.reply("Une erreur est survenue !");
