@@ -17,6 +17,6 @@ module.exports = {
 
         if(args < 1) return message.reply("Le nombre choisi doit être **strictement supérieur à 0** !\n\`Exemple : <roll 7\`");
         
-        await message.channel.send(`Roll : \`${Math.floor(Math.random() * Math.floor(Number(args))) + 1}\``)
+        await message.reply(`Roll : \`${Math.floor(Math.random() * Math.floor(Number(args))) + 1}\``)
     }
 }

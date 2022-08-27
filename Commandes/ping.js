@@ -15,6 +15,6 @@ module.exports = {
 
         if(args.length > 0) return message.reply(`Une erreur est survenue ! \nUtilise \`${config.prefix}help\` si besoin `);
 
-        await message.channel.send(`Ping : \`${bot.ws.ping} ms\``)
+        await message.reply(`Ping : \`${bot.ws.ping} ms\``)
     }
 }
