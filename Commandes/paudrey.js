@@ -4,7 +4,7 @@ const config = require("../config")
 module.exports = {
 
     name: "paudrey",
-    description: "Tout savoir sur notre magnifique Paudrey \*(si présent sur le serveur)\*",
+    description: "Tout savoir sur notre magnifique Paudrey",
     detail: "",
     argument: "",
     permission: "Aucune",
@@ -37,7 +37,11 @@ module.exports = {
                 },
                 {
                     name: `Description`,
+<<<<<<< HEAD
                     value: `Paudrey est le dictateur du serveur Smile \*(serveur de merde au passage)\*. Pourquoi je dis ça ? Parce que monsieur abuse de ses pouvoirs (il mute les gens sans aucune raison juste pour faire chier son monde). Bon après je dit “dictateur” mais en réalité il se fait bully h24 par tout le monde…\nIl a deux objectifs dans la vie : casser les couilles et trouver la motivation (qu’il cherche depuis plusieurs années maintenant)`,
+=======
+                    value: `Paudrey est le dictateur du serveur Smile \*(serveur de merde au passage)\*. Pourquoi je dis ça ? Parce que monsieur abuse de ses pouvoirs, il mute les gens sans aucune raison juste pour faire chier son monde. Bon après je dit “dictateur” mais en réalité il se fait bully h24 par tout le monde…\nIl a deux objectifs dans la vie : casser les couilles et casser les couilles`,
+>>>>>>> 55380f2d9728bf4d16392c681d04beb7f0cb666f
                     inline: false
                 }
             ])
