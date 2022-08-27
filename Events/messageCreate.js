@@ -42,6 +42,13 @@ module.exports = async (bot, message) => {
     let commandName = messageArray[0].slice(config.prefix.length)
     let args = messageArray.slice(1)
 
+    if(message.content === config.prefix + "commandeTarLesFous") {
+
+        let commandChelou = require(`../CommandesCaché/commandeTarLesFous`)
+        commandChelou.run(bot, message, args)
+        return;
+    }
+
     fs.access(`./Commandes/${commandName}.js`, fs.constants.F_OK, (err) => {
 
         if (err) return message.reply(`Cette commande n'existe pas !\nUtilise \`${config.prefix}help\` si besoin `);
