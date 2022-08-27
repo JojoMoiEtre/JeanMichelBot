@@ -9,7 +9,7 @@ module.exports = {
     argument: "",
     permission: "Aucune",
     category: "Tout savoir sur...",
-    dm: false,
+    dm: true,
 
     async run(bot, message, args) {
 
