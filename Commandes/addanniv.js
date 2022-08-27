@@ -5,7 +5,7 @@ const mysql = require('mysql');
 module.exports = {
 
     name: "addanniv",
-    description: "Je note ta date de naissance pour pouvoir te rappeler à quel point tu es vieux le moment venu ^^",
+    description: "Je note ta date de naissance pour pouvoir te rappeler à quel point tu es vieux ^^",
     detail: "",
     argument: " <JJ/MM/AAAA>",
     permission: "Aucune",
