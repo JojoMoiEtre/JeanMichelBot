@@ -8,9 +8,13 @@ module.exports = {
 
     async run (bot, message) {
 
-        if(Math.floor(Math.random() * Math.floor(3)) === 1) {
+        if(Math.floor(Math.random() * Math.floor(6)) === 1) {
             blague123Soleil.blague123Soleil = false;
             message.channel.send(`Stiti`);
+        }
+        else if(Math.floor(Math.random() * Math.floor(6)) === 3) {
+            blague123Soleil.blague123Soleil = false;
+            message.channel.send(`Fi`);
         }
     }
 }
