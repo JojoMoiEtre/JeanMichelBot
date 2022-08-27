@@ -39,8 +39,8 @@ module.exports = {
             +"\n*• Niveau **3*** : 15 lettres minuscules (avec ou sans accent), majuscules ou caractères numériques"
             +"\n*• Niveau **4*** : 15 lettres minuscules (avec ou sans accent), majuscules, caractères numériques ou spéciaux"
             +"\n*• Niveau **5*** : 25 lettres minuscules (avec ou sans accent), majuscules, caractères numériques ou spéciaux"
-            +"\n*• Niveau **#*** : Si t'es vraiment chaud"
-            +"\n*• Niveau **##*** : Si t'es vraiment BEAUCOUP trop chaud",
+            +"\n*• Niveau **\**** : Si t'es vraiment chaud"
+            +"\n*• Niveau **\*\**** : Si t'es vraiment BEAUCOUP trop chaud",
     argument: " <niveau>",
     permission: "Aucune",
     category: "Jeux",
