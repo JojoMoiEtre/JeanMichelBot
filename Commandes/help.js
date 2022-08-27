@@ -5,7 +5,7 @@ const fs = require('fs')
 module.exports = {
 
     name: "help",
-    description: "La commande help",
+    description: "Je te donne la liste des commandes disponibles ou toutes les infos sur une commande",
     detail: "",
     argument: " <commande>",
     permission: "Aucune",
