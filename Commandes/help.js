@@ -37,7 +37,7 @@ module.exports = {
             .setColor("#1BD69A")
             .setTitle(this.category + " - " + this.name.charAt(0).toUpperCase() + this.name.slice(1))
             .setThumbnail(bot.user.displayAvatarURL({dynamic: true}))
-            .setDescription("Voici le peu de commandes que je peux réaliser pour le moment :")
+            .setDescription(`Voici la liste de toutes les commandes disponibles actuellement :\n(Je n'en possède pas beaucoup mais pour remédier à ce problème n'hésitez pas à ping ${bot.users.cache.get('321029072606068736').username} Aka JojoLeDéchet pour qu’il se bouge le cul)`)
             .setTimestamp();
 
             categories.sort().forEach((cat, i) => {
