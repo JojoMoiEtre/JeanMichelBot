@@ -4,7 +4,7 @@ const config = require("../config")
 module.exports = {
 
     name: "jojo",
-    description: "Tout savoir sur mon superbe créateur \*(si présent sur le serveur)\*",
+    description: "Tout savoir sur mon superbe créateur",
     detail: "",
     argument: "",
     permission: "Aucune",
