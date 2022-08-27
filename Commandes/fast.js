@@ -34,13 +34,13 @@ module.exports = {
 
     name: "fast",
     description: "C'est un jeu où vous devez retaper la chaîne de caractères choisie par mes soins le plus rapidement possible",
-    detail: "\n*` Niveau **1**` : 15 lettres minuscules"
-            +"\n`• Niveau **2**` : 15 lettres minuscules ou majuscules"
-            +"\n`• Niveau **3**` : 15 lettres minuscules (avec ou sans accent), majuscules ou caractères numériques"
-            +"\n`• Niveau **4**` : 15 lettres minuscules (avec ou sans accent), majuscules, caractères numériques ou spéciaux"
-            +"\n`• Niveau **5**` : 25 lettres minuscules (avec ou sans accent), majuscules, caractères numériques ou spéciaux"
-            +"\n`• Niveau* **\***` : Si t'es vraiment chaud"
-            +"\n`• Niveau* **\*\***` : Si t'es vraiment BEAUCOUP trop chaud",
+    detail: "\n• Niveau `1` : 15 lettres minuscules"
+            +"\n• Niveau `2` : 15 lettres minuscules ou majuscules"
+            +"\n• Niveau `3` : 15 lettres minuscules (avec ou sans accent), majuscules ou caractères numériques"
+            +"\n• Niveau `4` : 15 lettres minuscules (avec ou sans accent), majuscules, caractères numériques ou spéciaux"
+            +"\n• Niveau `5` : 25 lettres minuscules (avec ou sans accent), majuscules, caractères numériques ou spéciaux"
+            +"\n• Niveau `\*` : Si t'es vraiment chaud"
+            +"\n• Niveau `\*\*` : Si t'es vraiment BEAUCOUP trop chaud",
     argument: " <niveau>",
     permission: "Aucune",
     category: "Jeux",
