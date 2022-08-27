@@ -16,6 +16,8 @@ module.exports = {
 
         if(args.length > 0) return;
 
+        message.delete()
+
         message.author.send({
             files: [
                 `./ressources/dmChelou.txt`
