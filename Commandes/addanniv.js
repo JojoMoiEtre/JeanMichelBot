@@ -30,28 +30,61 @@ module.exports = {
             password: "G32BT7u20JvcM0oDC98e"
         });
 
-        db.query(`CREATE TABLE IF NOT EXISTS \`${message.guild.id}\` (ID VARCHAR(255), DateJourMois VARCHAR(255), DateFull VARCHAR(255), Channell VARCHAR(255), PRIMARY KEY(ID, DateJourMois, DateFull, Channell))`, async (err) => {
-            if(err) return console.log(err);
+        db.getConnection(function(err, connection) {
+            
+            if (err) throw err;
+
+            setTimeout(() => {
+                connection.query(`SELECT * FROM \`${message.guild.id}\` WHERE ID = ${message.author.id}`, async (err, req) => {
+
+                    connection.release()
+
+                    if(err) {
+
+                        connection.destroy()
+                        return message.reply("Le salon d’annonces n’a pas été indiqué !\n\`<annivchannel <IDchannel>` pour choisir le salon");
+                    }
+
+                    if(req.length < 1) {
+            
+                        connection.query(`SELECT * FROM \`${message.guild.id}\` WHERE ID = ${bot.user.id}`, async (err, req) => {
+
+                            if(err) {
+
+                                connection.destroy()
+                                return err;
+                            }
+
+                            if(req.length > 0) {
+
+                                let sql = `INSERT INTO \`${message.guild.id}\` (ID, DateJourMois, DateFull, Channell) VALUES (${message.author.id}, '${dateAnniv[0]}/${dateAnniv[1]}', '${dateAnniv[0]}/${dateAnniv[1]}/${dateAnniv[2]}', '${req[0].Channell}')`
+                                    connection.query(sql, function(err) {
+                            
+                                    if(err) {
+                                        
+                                        connection.destroy()
+                                        return message.reply("Une erreur de connection avec la BDD est survenue !");
+                                    }
+
+                                    else {
+
+                                        connection.destroy()
+                                        return message.reply("Ton anniversaire a bien été enregistré !");
+                                    }
+                                })
+                            }
+                        })
+
+                        
+                    }
+
+                    else {
+
+                        connection.destroy()
+                        return message.reply("Tu as déjà enregistré ta date d’anniversaire !");
+                    }
+                })
+            }, 1000);
         })
-
-        setTimeout(() => {
-            db.query(`SELECT * FROM \`${message.guild.id}\` WHERE ID = ${message.author.id}`, async (err, req) => {
-
-                if(err) return message.reply("Une erreur est survenue !");
-
-                if(req.length < 1) {
-
-                    let sql = `INSERT INTO \`${message.guild.id}\` (ID, DateJourMois, DateFull, Channell) VALUES (${message.author.id}, '${dateAnniv[0]}/${dateAnniv[1]}', '${dateAnniv[0]}/${dateAnniv[1]}/${dateAnniv[2]}', 'null')`
-                    db.query(sql, function(err) {
-
-                        if(err) return message.reply("Une erreur est survenue !");
-                        else message.reply("Ton anniversaire a bien été enregistré !");
-                    })
-                }
-                else {
-                    message.reply("Tu as déjà enregistré ta date d’anniversaire !");
-                }
-            })
-        }, 1500);
     }
 }

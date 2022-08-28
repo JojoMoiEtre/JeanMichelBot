@@ -33,7 +33,7 @@ module.exports = {
 
             let index_solo = Math.floor(Math.random() * (annonce_solo.length))
 
-            bot.channels.cache.get(config.channelAnniv).send(annonce_solo[index_solo])
+            bot.channels.cache.get(message[0].Channell).send(annonce_solo[index_solo])
         }
 
         if(message.length > 1) {
@@ -55,7 +55,7 @@ module.exports = {
 
             let index_multi = Math.floor(Math.random() * (annonce_multi.length))
 
-            bot.channels.cache.get(config.channelAnniv).send(annonce_multi[index_multi])
+            bot.channels.cache.get(message[0].Channell).send(annonce_multi[index_multi])
         }
     }
 }
