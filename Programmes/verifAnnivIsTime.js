@@ -31,6 +31,8 @@ module.exports = async bot => {
                 let dateJour = dateDuJour();
                 let heure = date.getHours();
                 let minute = date.getMinutes();
+                
+                console.log(dateJour)
 
                 if(heure === 7) {
                     if(minute === 0) {
