@@ -31,12 +31,14 @@ module.exports = async bot => {
                 let dateJour = dateDuJour();
                 let heure = date.getHours();
                 let minute = date.getMinutes();
+                
+                console.log(guild.id)
 
                 if(heure === 5) {
                     if(minute === 10) {
                         db.query(`SELECT * FROM \`${guild.id}\` WHERE DateJourMois = \'${dateJour}\'`, async (err, req) => {
 
-                            if(err) return console.log(erreur);
+                            if(err) return console.log("erreur");
                             if(req.length > 0) {
 
                                 let command = require(`./annivIsTime`)
