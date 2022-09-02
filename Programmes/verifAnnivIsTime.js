@@ -31,10 +31,8 @@ module.exports = async bot => {
                 let dateJour = dateDuJour();
                 let heure = date.getHours();
                 let minute = date.getMinutes();
-                
-                console.log(dateJour)
 
-                if(heure === 7) {
+                if(heure === 5) {
                     if(minute === 0) {
                         db.query(`SELECT * FROM \`${guild.id}\` WHERE DateJourMois = \'${dateJour}\'`, async (err, req) => {
 
